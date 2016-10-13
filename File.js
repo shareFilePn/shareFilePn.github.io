@@ -146,13 +146,10 @@ var File = {
     },
 
     Receiver: function(config) {
-        console.log('aaaaaa');
         var packets = { };
 
-        function receive(chunk) {
-
-            console.log('bbbbbb');
-            console.log(chunk);
+        function receive(chunk) {  
+            //console.log(chunk);
 
             if (chunk.start && !packets[chunk.uuid]) {
                 packets[chunk.uuid] = [];
